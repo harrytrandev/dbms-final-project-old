@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SupermartketManager.DTO
 {
-    internal class Company
+    internal class CompanyDTO
     {
         public int company_id { get; set; }
         public string name { get; set; }
         public string address { get; set; }
         public string phone { get; set; }
 
-        public Company(int company_id, string name, string address, string phone)
+        public CompanyDTO(int company_id, string name, string address, string phone)
         {
             this.company_id = company_id;
             this.name = name;

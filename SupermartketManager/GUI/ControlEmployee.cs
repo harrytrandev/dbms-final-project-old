@@ -69,6 +69,7 @@ namespace SupermartketManager.GUI
                 }
                 cbPosition.DisplayMember = "Text";
                 cbPosition.ValueMember = "Value";
+                cbPosition.DataSource = null;
                 cbPosition.DataSource = positionItems;
 
                 // Load data for datagridview

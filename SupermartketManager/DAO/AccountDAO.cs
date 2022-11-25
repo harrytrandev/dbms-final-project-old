@@ -42,5 +42,11 @@ namespace SupermartketManager.DAO
             query = "SELECT * FROM [dbo].[func_Account_GetAll]()";
             return dataProvider.ExecuteQuery(query, ref errorMessage);
         }
+
+        public DataTable GetAccount(string username, ref string errorMessage)
+        {
+            query = "SELECT * FROM [dbo].[func_Account_GetAccount]( @username )";
+            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { username });
+        }
     }
 }

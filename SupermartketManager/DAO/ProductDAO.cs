@@ -44,5 +44,17 @@ namespace SupermartketManager.DAO
             query = "SELECT * FROM [dbo].[func_Product_GetAll]()";
             return dataProvider.ExecuteQuery(query, ref errorMessage);
         }
+
+        public DataTable FindByName(string keyword, ref string errorMessage)
+        {
+            query = "SELECT * FROM [dbo].[func_Product_SearchByKeyword]( @keyword )";
+            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { keyword });
+        }
+
+        public DataTable TopSale(int month, int year, ref string errorMessage)
+        {
+            query = "SELECT * FROM [dbo].[func_Product_TopSale]( @month , @year )";
+            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { month, year });
+        }
     }
 }

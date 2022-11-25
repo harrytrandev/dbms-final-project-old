@@ -17,3 +17,9 @@ D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj
 D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.ControlWarehouse.resources
 D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.ControlAccount.resources
 D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.ControlCustomer.resources
+D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.ControlImport.resources
+D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.FormPayment.resources
+D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.GroupInfo.resources
+D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.ControlCompany.resources
+D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.SalesStatisticByMonth.resources
+D:\Study\hk1-2223\dbms\final-project\SupermartketManager\SupermartketManager\obj\Debug\SupermartketManager.GUI.SaleStatisticByYear.resources

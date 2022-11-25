@@ -8,14 +8,14 @@ namespace SupermartketManager.DTO
 {
     internal class CustomerDTO
     {
-        public string phone { get; set; }
+        public string customer_phone { get; set; }
         public string name { get; set; }
         public string birthday { get; set; }
-        public int gender { get; set; }
+        public string gender { get; set; }
         public int point { get; set; }
-        public CustomerDTO(string phone, string name, string birthday, int gender, int point)
+        public CustomerDTO(string customer_phone, string name, string birthday, string gender, int point)
         {
-            this.phone = phone;
+            this.customer_phone = customer_phone;
             this.name = name;
             this.birthday = birthday;
             this.gender = gender;

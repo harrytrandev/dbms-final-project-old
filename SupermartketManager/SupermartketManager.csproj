@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,11 +78,23 @@
     <Compile Include="GUI\ControlAccount.Designer.cs">
       <DependentUpon>ControlAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ControlCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ControlCompany.Designer.cs">
+      <DependentUpon>ControlCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ControlCustomer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\ControlCustomer.Designer.cs">
       <DependentUpon>ControlCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ControlImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ControlImport.Designer.cs">
+      <DependentUpon>ControlImport.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ControlProduct.cs">
       <SubType>UserControl</SubType>
@@ -125,14 +138,44 @@
     <Compile Include="GUI\ControlPosition.Designer.cs">
       <DependentUpon>ControlPosition.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormPayment.Designer.cs">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GroupInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\GroupInfo.Designer.cs">
+      <DependentUpon>GroupInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SalesStatisticByMonth.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\SalesStatisticByMonth.Designer.cs">
+      <DependentUpon>SalesStatisticByMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SaleStatisticByYear.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\SaleStatisticByYear.Designer.cs">
+      <DependentUpon>SaleStatisticByYear.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\ComboboxItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\ControlAccount.resx">
       <DependentUpon>ControlAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ControlCompany.resx">
+      <DependentUpon>ControlCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ControlCustomer.resx">
       <DependentUpon>ControlCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ControlImport.resx">
+      <DependentUpon>ControlImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ControlProduct.resx">
       <DependentUpon>ControlProduct.cs</DependentUpon>
@@ -154,6 +197,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ControlPosition.resx">
       <DependentUpon>ControlPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormPayment.resx">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GroupInfo.resx">
+      <DependentUpon>GroupInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SalesStatisticByMonth.resx">
+      <DependentUpon>SalesStatisticByMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SaleStatisticByYear.resx">
+      <DependentUpon>SaleStatisticByYear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -180,6 +235,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
