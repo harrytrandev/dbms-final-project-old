@@ -102,5 +102,12 @@ namespace SupermartketManager.GUI
         {
             saleStatisticByYear1.BringToFront();
         }
+
+        private void thốngKêKháchHàngMuaNhiềuNhấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlCustomerMaxSpending1.BringToFront();
+        }
+
+
     }
 }

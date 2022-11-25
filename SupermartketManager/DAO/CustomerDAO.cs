@@ -53,5 +53,10 @@ namespace SupermartketManager.DAO
             query = "EXEC [dbo].[proc_Customer_AccumulatePoints] @customer_phone , @bill_id";
             return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { customer_phone, bill_id });
         }
+        public DataTable MaxSpending(int year, int month, ref string errorMessage)
+        {
+            query = "EXEC [dbo].[proc_Customer_FindMaxSpending] @Year , @Month";
+            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { year, month });
+        }
     }
 }
