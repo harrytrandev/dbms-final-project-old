@@ -102,5 +102,10 @@ namespace SupermartketManager.GUI
         {
             saleStatisticByYear1.BringToFront();
         }
+
+        private void côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlTopCompany1.BringToFront();
+        }
     }
 }

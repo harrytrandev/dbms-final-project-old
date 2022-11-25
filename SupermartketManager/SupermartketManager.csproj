@@ -102,6 +102,12 @@
     <Compile Include="GUI\ControlProduct.Designer.cs">
       <DependentUpon>ControlProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ControlTopCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ControlTopCompany.Designer.cs">
+      <DependentUpon>ControlTopCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ControlWarehouse.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ControlProduct.resx">
       <DependentUpon>ControlProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ControlTopCompany.resx">
+      <DependentUpon>ControlTopCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ControlWarehouse.resx">
       <DependentUpon>ControlWarehouse.cs</DependentUpon>
