@@ -88,11 +88,6 @@ namespace SupermartketManager.GUI
             }
         }
 
-        private void mniTopSale_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void doanhThuTheoThángToolStripMenuItem_Click(object sender, EventArgs e)
         {
             salesStatisticByMonth1.BringToFront();
@@ -117,5 +112,11 @@ namespace SupermartketManager.GUI
         {
             controlCustomer1.BringToFront();
         }
+
+        private void mặtHàngĐãBánTrongThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlProductSoldByMonth1.BringToFront();
+        }
+
     }
 }
