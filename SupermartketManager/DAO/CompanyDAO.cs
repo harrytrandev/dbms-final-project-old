@@ -41,5 +41,11 @@ namespace SupermartketManager.DAO
             query = "SELECT * FROM [dbo].[func_Company_GetAll]()";
             return dataProvider.ExecuteQuery(query, ref errorMessage);
         }
+
+        public DataTable TopCompany(int month, int year, ref string errorMessage)
+        {
+            query = "SELECT * FROM [dbo].[func_Company_Find_TopSupply]( @month , @year )";
+            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] {month, year});
+        }
     }
 }
