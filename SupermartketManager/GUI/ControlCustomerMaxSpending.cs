@@ -26,6 +26,10 @@ namespace SupermartketManager.GUI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            txtPhone.ResetText();
+            txtName.ResetText();
+            txtTotalSpending.ResetText();
+            txtPoint.ResetText();
             int month = -1;
             int year = -1;
             if ((Int32.TryParse(txtMonthInput.Text, out month) | Int32.TryParse(txtYearInput.Text, out year)) == false)
