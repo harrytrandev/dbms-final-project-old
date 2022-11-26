@@ -53,6 +53,7 @@ namespace SupermartketManager.GUI
             txtPhone.ResetText();
             dtpBirthday.ResetText();
             txtPhone.ResetText();
+            txtPoint.Text = "0";
         }
 
         private void LoadData()

@@ -20,14 +20,14 @@ namespace SupermartketManager.DAO
 
         public int Insert(CustomerDTO customer, ref string errorMessage)
         {
-            query = "EXEC dbo.proc_Customer_Add @customer_phone , @name, @birthday , @gender";
+            query = "EXEC dbo.proc_Customer_Add @customer_phone , @name , @birthday , @gender";
             return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { customer.customer_phone, customer.name, customer.birthday, customer.gender }); ;
         }
 
         public int Update(CustomerDTO customer, ref string errorMessage)
         {
-            query = "EXEC dbo.proc_Customer_Update @customer_phone , @name, @birthday , @gender";
-            return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { customer.customer_phone, customer.name, customer.birthday, customer.gender });
+            query = "EXEC dbo.proc_Customer_Update @customer_phone , @name , @birthday , @gender , @point";
+            return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { customer.customer_phone, customer.name, customer.birthday, customer.gender, customer.point});
         }
 
         public int Delete(string customer_phone, ref string errorMessage)
