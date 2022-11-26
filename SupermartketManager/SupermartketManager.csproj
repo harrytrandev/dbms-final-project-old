@@ -112,6 +112,12 @@
     <Compile Include="GUI\ControlProduct.Designer.cs">
       <DependentUpon>ControlProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ControlProductSoldByMonth.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ControlProductSoldByMonth.Designer.cs">
+      <DependentUpon>ControlProductSoldByMonth.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ControlTopCompany.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ControlProduct.resx">
       <DependentUpon>ControlProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ControlProductSoldByMonth.resx">
+      <DependentUpon>ControlProductSoldByMonth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ControlTopCompany.resx">
       <DependentUpon>ControlTopCompany.cs</DependentUpon>

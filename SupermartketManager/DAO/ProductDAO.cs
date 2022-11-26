@@ -51,9 +51,9 @@ namespace SupermartketManager.DAO
             return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { keyword });
         }
 
-        public DataTable TopSale(int month, int year, ref string errorMessage)
+        public DataTable SoldByMonth(int month, int year, ref string errorMessage)
         {
-            query = "SELECT * FROM [dbo].[func_Product_TopSale]( @month , @year )";
+            query = "SELECT * FROM [dbo].[func_Product_SoldByMonth]( @month , @year )";
             return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { month, year });
         }
     }

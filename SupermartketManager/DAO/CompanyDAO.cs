@@ -21,13 +21,13 @@ namespace SupermartketManager.DAO
         public int Insert(CompanyDTO company, ref string errorMessage)
         {
             query = "EXEC [dbo].[proc_Company_Add] @name , @address , @phone";
-            return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { company.name, company.address, company.address });
+            return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { company.name, company.address, company.phone });
         }
 
         public int Update(CompanyDTO company, ref string errorMessage)
         {
             query = "EXEC [dbo].[proc_Company_Update] @company_id , @name , @address , @phone";
-            return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { company.company_id, company.name, company.address, company.address });
+            return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { company.company_id, company.name, company.address, company.phone });
         }
 
         public int Delete(int companyId, ref string errorMessage)
