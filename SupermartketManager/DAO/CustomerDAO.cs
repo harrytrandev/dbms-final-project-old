@@ -55,8 +55,8 @@ namespace SupermartketManager.DAO
         }
         public DataTable MaxSpending(int year, int month, ref string errorMessage)
         {
-            query = "EXEC [dbo].[proc_Customer_FindMaxSpending] @Year , @Month";
-            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { year, month });
+            query = "SELECT * FROM [dbo].[func_Customer_FindMaxSpending] ( @Month , @Year )";
+            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { month, year });
         }
     }
 }
