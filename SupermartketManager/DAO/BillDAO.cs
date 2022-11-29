@@ -63,5 +63,10 @@ namespace SupermartketManager.DAO
             query = "SELECT * from [dbo].[func_Statistic_Sale_ByYear]()";
             return dataProvider.ExecuteQuery(query, ref errorMessage);
         }
+        public DataTable StatisticByDMY(int date, int month, int year, ref string errorMessage)
+        {
+            query = "SELECT * FROM [dbo].[func_Statistic_Sale_ByDate] ( @Date , @Month , @Year )";
+            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { date, month, year });
+        }
     }
 }

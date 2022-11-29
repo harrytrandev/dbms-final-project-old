@@ -21,26 +21,53 @@ namespace SupermartketManager.GUI
             InitializeComponent();
             billDAO = new BillDAO();
             errorMessage = "";
-            LoadData();
         }
 
-        public void LoadData()
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            //txtDate.ResetText();
+            //txtMonth.ResetText();
+            //txtYear.ResetText();
+
+            int date = -1;
+            int month = -1;
+            int year = -1;
+            if ((Int32.TryParse(txtDate.Text, out date) | Int32.TryParse(txtMonth.Text, out month) | Int32.TryParse(txtYear.Text, out year)) == false)
+            {
+                MessageBox.Show("Nhập khống đúng tháng hoặc năm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (date>0 && date <=31 && month >= 1 && month <= 12 && year >= 0)
+            {
+                LoadData(date,month, year);
+            }
+            else
+            {
+                MessageBox.Show("Nhập khống đúng tháng hoặc năm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+        public void LoadData(int date, int month, int year)
         {
             try
             {
                 // Retrieve data from db
                 DataTable statisticsByMonthDb = new DataTable();
-                statisticsByMonthDb = billDAO.StatisticByMontḥ(ref errorMessage);
+                statisticsByMonthDb = billDAO.StatisticByDMY(date,month,year,ref errorMessage);
                 dgvStatistic.DataSource = statisticsByMonthDb;
 
                 int width = dgvStatistic.Width;
                 // Styling categories datagridview
-                dgvStatistic.Columns[0].Width = (int)(width * 0.3);
-                dgvStatistic.Columns[0].HeaderText = "Tháng";
-                dgvStatistic.Columns[1].Width = (int)(width * 0.3);
-                dgvStatistic.Columns[1].HeaderText = "Năm";
-                dgvStatistic.Columns[2].Width = (int)(width * 0.3);
-                dgvStatistic.Columns[2].HeaderText = "Doanh thu";
+                dgvStatistic.Columns[0].Width = (int)(width * 0.2);
+                dgvStatistic.Columns[0].HeaderText = "Ngày";
+                dgvStatistic.Columns[1].Width = (int)(width * 0.2);
+                dgvStatistic.Columns[1].HeaderText = "Tháng";
+                dgvStatistic.Columns[2].Width = (int)(width * 0.2);
+                dgvStatistic.Columns[2].HeaderText = "Năm";
+                dgvStatistic.Columns[3].Width = (int)(width * 0.2);
+                dgvStatistic.Columns[3].HeaderText = "Doanh thu";
+                dgvStatistic.Columns[4].Width = (int)(width * 0.2);
+                dgvStatistic.Columns[4].HeaderText = "Tổng số đơn";
             }
             catch (Exception e)
             {
@@ -56,20 +83,20 @@ namespace SupermartketManager.GUI
             int curr = dgvStatistic.CurrentCell.RowIndex;
 
             // Get data from select 
-            //string stt = dgvStatistic.Rows[curr].Cells[0].Value.ToString();
+            string date = dgvStatistic.Rows[curr].Cells[0].Value.ToString();
             string month = dgvStatistic.Rows[curr].Cells[0].Value.ToString();
             string year = dgvStatistic.Rows[curr].Cells[1].Value.ToString();
-            string total = dgvStatistic.Rows[curr].Cells[2].Value.ToString();
 
             // Fill data to inputs
+            txtMonth.Text = date;
             txtMonth.Text = month;
             txtYear.Text = year;
-            txtTotal.Text = total;
         }
 
         private void SalesStatisticByMonth_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }

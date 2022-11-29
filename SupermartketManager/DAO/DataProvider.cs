@@ -15,7 +15,7 @@ namespace SupermartketManager.DAO
 
         public DataProvider()
         {
-            connectionString = @"Data Source=.;Initial Catalog=SupermarketManagement;Integrated Security=True";
+            connectionString = @"Data Source=dihuynh18\SQLEXPRESS01;Initial Catalog=SupermarketManagement;Integrated Security=True";
         }
 
         public void OpenConnection()
