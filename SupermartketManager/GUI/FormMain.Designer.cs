@@ -40,16 +40,20 @@
             this.côngTyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniTopSale = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuTheoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuTheoNămToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLíTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.controlProductSoldByMonth1 = new SupermartketManager.GUI.ControlProductSoldByMonth();
+            this.controlCustomer1 = new SupermartketManager.GUI.ControlCustomer();
+            this.controlCustomerMaxSpending1 = new SupermartketManager.GUI.ControlCustomerMaxSpending();
             this.controlTopCompany1 = new SupermartketManager.GUI.ControlTopCompany();
             this.saleStatisticByYear1 = new SupermartketManager.GUI.SaleStatisticByYear();
             this.salesStatisticByMonth1 = new SupermartketManager.GUI.SalesStatisticByMonth();
@@ -70,6 +74,8 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.controlProductSoldByMonth1);
+            this.panel2.Controls.Add(this.controlCustomer1);
+            this.panel2.Controls.Add(this.controlCustomerMaxSpending1);
             this.panel2.Controls.Add(this.controlTopCompany1);
             this.panel2.Controls.Add(this.saleStatisticByYear1);
             this.panel2.Controls.Add(this.salesStatisticByMonth1);
@@ -86,6 +92,7 @@
             this.panel2.Controls.Add(this.ucCategory1);
             this.panel2.Controls.Add(this.menu);
             this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1135, 661);
             this.panel2.TabIndex = 3;
@@ -95,6 +102,7 @@
             this.lbAccountInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAccountInfo.ForeColor = System.Drawing.Color.Blue;
             this.lbAccountInfo.Location = new System.Drawing.Point(700, 0);
+            this.lbAccountInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAccountInfo.Name = "lbAccountInfo";
             this.lbAccountInfo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbAccountInfo.Size = new System.Drawing.Size(435, 32);
@@ -114,6 +122,7 @@
             this.mniAccount});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
+            this.menu.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menu.Size = new System.Drawing.Size(1135, 32);
             this.menu.TabIndex = 7;
             this.menu.Text = "menuStrip1";
@@ -140,7 +149,8 @@
             this.khoHàngToolStripMenuItem,
             this.côngTyToolStripMenuItem,
             this.chứcVụToolStripMenuItem,
-            this.nhânViênToolStripMenuItem});
+            this.nhânViênToolStripMenuItem,
+            this.kháchHàngToolStripMenuItem});
             this.mniManager.Name = "mniManager";
             this.mniManager.Size = new System.Drawing.Size(96, 28);
             this.mniManager.Text = "Quản lý";
@@ -187,13 +197,21 @@
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
+            // kháchHàngToolStripMenuItem
+            // 
+            this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(242, 28);
+            this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
+            this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
+            // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mniTopSale,
             this.doanhThuTheoThángToolStripMenuItem,
             this.doanhThuTheoNămToolStripMenuItem,
-            this.côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem});
+            this.côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem,
+            this.kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(113, 28);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
@@ -226,6 +244,13 @@
             this.côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem.Text = "Công ty cung cấp hàng nhiều nhất trong tháng";
             this.côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem.Click += new System.EventHandler(this.côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem_Click);
             // 
+            // kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem
+            // 
+            this.kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem.Name = "kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem";
+            this.kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem.Size = new System.Drawing.Size(528, 28);
+            this.kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem.Text = "Khách hàng chi tiêu nhiều nhất tháng";
+            this.kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem_Click);
+            // 
             // mniAccount
             // 
             this.mniAccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -240,6 +265,7 @@
             this.quảnLíTàiKhoảnToolStripMenuItem.Name = "quảnLíTàiKhoảnToolStripMenuItem";
             this.quảnLíTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(251, 28);
             this.quảnLíTàiKhoảnToolStripMenuItem.Text = "Quản lí tài khoản";
+            this.quảnLíTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
             // mniLogout
             // 
@@ -253,15 +279,35 @@
             // controlProductSoldByMonth1
             // 
             this.controlProductSoldByMonth1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.controlProductSoldByMonth1.Location = new System.Drawing.Point(3, 90);
+            this.controlProductSoldByMonth1.Location = new System.Drawing.Point(4, 112);
+            this.controlProductSoldByMonth1.Margin = new System.Windows.Forms.Padding(4);
             this.controlProductSoldByMonth1.Name = "controlProductSoldByMonth1";
-            this.controlProductSoldByMonth1.Size = new System.Drawing.Size(1120, 558);
+            this.controlProductSoldByMonth1.Size = new System.Drawing.Size(1400, 698);
             this.controlProductSoldByMonth1.TabIndex = 14;
+            // 
+            // controlCustomer1
+            // 
+            this.controlCustomer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlCustomer1.Location = new System.Drawing.Point(4, 88);
+            this.controlCustomer1.Margin = new System.Windows.Forms.Padding(2);
+            this.controlCustomer1.Name = "controlCustomer1";
+            this.controlCustomer1.Size = new System.Drawing.Size(1120, 558);
+            this.controlCustomer1.TabIndex = 15;
+            // 
+            // controlCustomerMaxSpending1
+            // 
+            this.controlCustomerMaxSpending1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlCustomerMaxSpending1.Location = new System.Drawing.Point(4, 88);
+            this.controlCustomerMaxSpending1.Margin = new System.Windows.Forms.Padding(4);
+            this.controlCustomerMaxSpending1.Name = "controlCustomerMaxSpending1";
+            this.controlCustomerMaxSpending1.Size = new System.Drawing.Size(1120, 558);
+            this.controlCustomerMaxSpending1.TabIndex = 14;
             // 
             // controlTopCompany1
             // 
             this.controlTopCompany1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlTopCompany1.Location = new System.Drawing.Point(3, 90);
+            this.controlTopCompany1.Location = new System.Drawing.Point(2, 100);
+            this.controlTopCompany1.Margin = new System.Windows.Forms.Padding(2);
             this.controlTopCompany1.Name = "controlTopCompany1";
             this.controlTopCompany1.Size = new System.Drawing.Size(1120, 558);
             this.controlTopCompany1.TabIndex = 13;
@@ -269,7 +315,8 @@
             // saleStatisticByYear1
             // 
             this.saleStatisticByYear1.Font = new System.Drawing.Font("Calibri", 12F);
-            this.saleStatisticByYear1.Location = new System.Drawing.Point(0, 103);
+            this.saleStatisticByYear1.Location = new System.Drawing.Point(0, 102);
+            this.saleStatisticByYear1.Margin = new System.Windows.Forms.Padding(2);
             this.saleStatisticByYear1.Name = "saleStatisticByYear1";
             this.saleStatisticByYear1.Size = new System.Drawing.Size(1120, 558);
             this.saleStatisticByYear1.TabIndex = 12;
@@ -278,6 +325,7 @@
             // 
             this.salesStatisticByMonth1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesStatisticByMonth1.Location = new System.Drawing.Point(0, 88);
+            this.salesStatisticByMonth1.Margin = new System.Windows.Forms.Padding(2);
             this.salesStatisticByMonth1.Name = "salesStatisticByMonth1";
             this.salesStatisticByMonth1.Size = new System.Drawing.Size(1120, 558);
             this.salesStatisticByMonth1.TabIndex = 11;
@@ -295,6 +343,7 @@
             // 
             this.groupInfo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupInfo1.Location = new System.Drawing.Point(0, 88);
+            this.groupInfo1.Margin = new System.Windows.Forms.Padding(2);
             this.groupInfo1.Name = "groupInfo1";
             this.groupInfo1.Size = new System.Drawing.Size(1120, 558);
             this.groupInfo1.TabIndex = 9;
@@ -303,6 +352,7 @@
             // 
             this.controlImport1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlImport1.Location = new System.Drawing.Point(0, 88);
+            this.controlImport1.Margin = new System.Windows.Forms.Padding(2);
             this.controlImport1.Name = "controlImport1";
             this.controlImport1.Size = new System.Drawing.Size(1120, 558);
             this.controlImport1.TabIndex = 8;
@@ -311,6 +361,7 @@
             // 
             this.controlAccount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlAccount1.Location = new System.Drawing.Point(0, 88);
+            this.controlAccount1.Margin = new System.Windows.Forms.Padding(2);
             this.controlAccount1.Name = "controlAccount1";
             this.controlAccount1.Size = new System.Drawing.Size(1120, 558);
             this.controlAccount1.TabIndex = 6;
@@ -319,6 +370,7 @@
             // 
             this.controlWarehouse1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlWarehouse1.Location = new System.Drawing.Point(0, 88);
+            this.controlWarehouse1.Margin = new System.Windows.Forms.Padding(2);
             this.controlWarehouse1.Name = "controlWarehouse1";
             this.controlWarehouse1.Size = new System.Drawing.Size(1120, 558);
             this.controlWarehouse1.TabIndex = 5;
@@ -327,6 +379,7 @@
             // 
             this.controlEmployee1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlEmployee1.Location = new System.Drawing.Point(0, 88);
+            this.controlEmployee1.Margin = new System.Windows.Forms.Padding(2);
             this.controlEmployee1.Name = "controlEmployee1";
             this.controlEmployee1.Size = new System.Drawing.Size(1120, 558);
             this.controlEmployee1.TabIndex = 4;
@@ -335,6 +388,7 @@
             // 
             this.controlProduct1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlProduct1.Location = new System.Drawing.Point(0, 88);
+            this.controlProduct1.Margin = new System.Windows.Forms.Padding(2);
             this.controlProduct1.Name = "controlProduct1";
             this.controlProduct1.Size = new System.Drawing.Size(1120, 558);
             this.controlProduct1.TabIndex = 3;
@@ -343,6 +397,7 @@
             // 
             this.ucEmployee1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucEmployee1.Location = new System.Drawing.Point(0, 88);
+            this.ucEmployee1.Margin = new System.Windows.Forms.Padding(2);
             this.ucEmployee1.Name = "ucEmployee1";
             this.ucEmployee1.Size = new System.Drawing.Size(1120, 558);
             this.ucEmployee1.TabIndex = 2;
@@ -351,6 +406,7 @@
             // 
             this.ucPosition1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucPosition1.Location = new System.Drawing.Point(0, 88);
+            this.ucPosition1.Margin = new System.Windows.Forms.Padding(2);
             this.ucPosition1.Name = "ucPosition1";
             this.ucPosition1.Size = new System.Drawing.Size(1120, 558);
             this.ucPosition1.TabIndex = 1;
@@ -358,6 +414,7 @@
             // ucCategory1
             // 
             this.ucCategory1.Location = new System.Drawing.Point(0, 88);
+            this.ucCategory1.Margin = new System.Windows.Forms.Padding(2);
             this.ucCategory1.Name = "ucCategory1";
             this.ucCategory1.Size = new System.Drawing.Size(1120, 558);
             this.ucCategory1.TabIndex = 0;
@@ -370,6 +427,7 @@
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menu;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";
@@ -420,5 +478,9 @@
         private ControlTopCompany controlTopCompany1;
         private System.Windows.Forms.ToolStripMenuItem côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem;
         private ControlProductSoldByMonth controlProductSoldByMonth1;
+        private System.Windows.Forms.ToolStripMenuItem kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem;
+        private ControlCustomerMaxSpending controlCustomerMaxSpending1;
+        private ControlCustomer controlCustomer1;
+        private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
     }
 }
