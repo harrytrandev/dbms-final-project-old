@@ -52,7 +52,7 @@
             this.controlProductSoldByMonth1 = new SupermartketManager.GUI.ControlProductSoldByMonth();
             this.controlTopCompany1 = new SupermartketManager.GUI.ControlTopCompany();
             this.saleStatisticByYear1 = new SupermartketManager.GUI.SaleStatisticByYear();
-            this.salesStatisticByMonth1 = new SupermartketManager.GUI.SalesStatisticByMonth();
+            this.salesStatisticByMonth1 = new SupermartketManager.GUI.SalesStatistics();
             this.controlCompany1 = new SupermartketManager.GUI.ControlCompany();
             this.groupInfo1 = new SupermartketManager.GUI.GroupInfo();
             this.controlImport1 = new SupermartketManager.GUI.ControlImport();
@@ -414,7 +414,7 @@
         private GroupInfo groupInfo1;
         private ControlCompany controlCompany1;
         private SaleStatisticByYear saleStatisticByYear1;
-        private SalesStatisticByMonth salesStatisticByMonth1;
+        private SalesStatistics salesStatisticByMonth1;
         private System.Windows.Forms.ToolStripMenuItem doanhThuTheoThángToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doanhThuTheoNămToolStripMenuItem;
         private ControlTopCompany controlTopCompany1;

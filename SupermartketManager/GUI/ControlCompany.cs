@@ -245,5 +245,10 @@ namespace SupermartketManager.GUI
             txtAddress.Text = address;
             txtPhone.Text = phone;
         }
+
+        private void dgvCompanies_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

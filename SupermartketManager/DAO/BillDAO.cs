@@ -53,6 +53,11 @@ namespace SupermartketManager.DAO
             query = "EXEC [dbo].[proc_Bill_RoundTotal] @bill_id";
             return dataProvider.ExecuteNonQuery(query, ref errorMessage, new object[] { bill_id });
         }
+        public DataTable getBillByDate(int date, int month, int year, ref String errorMessage)
+        {
+            query = "SELECT * from [func_Bill_Find_ByDateMonthYear]( @Date , @Month , @Year )";
+            return dataProvider.ExecuteQuery(query, ref errorMessage, new object[] { date, month, year });
+        }
         public DataTable StatisticByMontḥ(ref String errorMessage)
         {
             query = "SELECT * from [dbo].[func_Statistic_Sale_ByMonth]()";

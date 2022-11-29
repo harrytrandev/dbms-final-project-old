@@ -107,3 +107,4 @@ D:\Học kỳ I 2022-2023\Hệ  quản trị cơ sở dữ liệu\Final\dbms-fin
 D:\Học kỳ I 2022-2023\Hệ  quản trị cơ sở dữ liệu\Final\dbms-final-project\SupermartketManager\obj\Debug\SupermartketManager.csproj.CoreCompileInputs.cache
 D:\Học kỳ I 2022-2023\Hệ  quản trị cơ sở dữ liệu\Final\dbms-final-project\SupermartketManager\obj\Debug\SupermartketManager.exe
 D:\Học kỳ I 2022-2023\Hệ  quản trị cơ sở dữ liệu\Final\dbms-final-project\SupermartketManager\obj\Debug\SupermartketManager.pdb
+D:\Học kỳ I 2022-2023\Hệ  quản trị cơ sở dữ liệu\Final\dbms-final-project\SupermartketManager\obj\Debug\SupermartketManager.GUI.SalesStatistics.resources

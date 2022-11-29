@@ -172,17 +172,11 @@
     <Compile Include="GUI\GroupInfo.Designer.cs">
       <DependentUpon>GroupInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\SalesStatisticByMonth.cs">
+    <Compile Include="GUI\SalesStatistics.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\SalesStatisticByMonth.Designer.cs">
-      <DependentUpon>SalesStatisticByMonth.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\SaleStatisticByYear.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\SaleStatisticByYear.Designer.cs">
-      <DependentUpon>SaleStatisticByYear.cs</DependentUpon>
+    <Compile Include="GUI\SalesStatistics.Designer.cs">
+      <DependentUpon>SalesStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ComboboxItem.cs" />
     <Compile Include="Program.cs" />
@@ -235,11 +229,8 @@
     <EmbeddedResource Include="GUI\GroupInfo.resx">
       <DependentUpon>GroupInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SalesStatisticByMonth.resx">
-      <DependentUpon>SalesStatisticByMonth.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SaleStatisticByYear.resx">
-      <DependentUpon>SaleStatisticByYear.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\SalesStatistics.resx">
+      <DependentUpon>SalesStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
