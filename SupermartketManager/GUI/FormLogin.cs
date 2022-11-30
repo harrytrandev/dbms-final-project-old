@@ -1,13 +1,7 @@
 ﻿using SupermartketManager.DAO;
 using SupermartketManager.DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SupermartketManager.GUI
@@ -28,40 +22,66 @@ namespace SupermartketManager.GUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
-            try
+            string enteredPassword = txtPassword.Text.Trim();
+            
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(enteredPassword))
             {
+                DataProvider.Username = username;
+                DataProvider.Password = enteredPassword;
+
                 userTable = accountDAO.GetAccount(username, ref errorMessage);
-                if (userTable.Rows.Count > 0)
+                try
                 {
-                    DataRow row = userTable.Rows[0];
-                    string password = row["password"].ToString();
-                    string employee_id = row["employee_id"].ToString();
-                    string employee_name = row["name"].ToString();
-                    string position_name = row["position_name"].ToString();
-                    string enteredPassword = txtPassword.Text;
-                    if (enteredPassword.Equals(password))
+                    if (userTable.Rows.Count > 0)
                     {
-                        FormMain formMain = new FormMain(employee_id, employee_name, position_name);
-                        formMain.ShowDialog();
-                        txtUsername.ResetText();
-                        txtPassword.ResetText();
-                        txtUsername.Focus();
+                        DataRow row = userTable.Rows[0];
+                        string employee_id = row["employee_id"].ToString();
+                        string employee_name = row["name"].ToString();
+                        string position_name = row["position_name"].ToString();
+                        string password = row["password"].ToString();
+                        if (enteredPassword.Equals(password))
+                        {
+                            if (position_name.Equals("Giám đốc"))
+                            {
+                                FormMain formMain1 = new FormMain(employee_id, employee_name, position_name);
+                                formMain1.ShowDialog();
+                            }
+                            else if (position_name.Equals("Quản lý"))
+                            {
+                                FormManager formManager = new FormManager(employee_id, employee_name, position_name);
+                                formManager.ShowDialog();
+                            }
+                            else if (position_name.Equals("Thu ngân"))
+                            {
+                                FormCashier formCashier = new FormCashier(employee_id, employee_name, position_name);
+                                formCashier.ShowDialog();
+                            }
+                            else
+                            {
+                                FormWarehouseKeeper formWarehouseKeeper = new FormWarehouseKeeper(employee_id, employee_name, position_name);
+                                formWarehouseKeeper.ShowDialog();
+                            }
+                            txtUsername.ResetText();
+                            txtPassword.ResetText();
+                            txtUsername.Focus();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mật khẩu chưa chính xác!");
+                            txtPassword.Focus();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Mật khẩu chưa chính xác, vui lòng kiểm tra lại!");
+                        MessageBox.Show("Đăng nhập không thành công!");
                         txtPassword.Focus();
                     }
+
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Tài khoản không tồn tại");
-                    txtUsername.Focus();
+                    MessageBox.Show(ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -71,11 +91,6 @@ namespace SupermartketManager.GUI
             {
                 btnLogin_Click(this, new EventArgs());
             }
-        }
-
-        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
