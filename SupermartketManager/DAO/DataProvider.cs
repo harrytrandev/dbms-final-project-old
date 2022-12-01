@@ -10,39 +10,37 @@ namespace SupermartketManager.DAO
 {
     internal class DataProvider
     {
-        private string connectionString;
-        private SqlConnection connection;
+        public static string ConnectionString;
+        public static string Username;
+        public static string Password;
+        public static SqlConnection Connection;
 
-        public DataProvider()
+        public static void OpenConnection()
         {
-            connectionString = @"Data Source=.;Initial Catalog=SupermarketManagement;Integrated Security=True";
-        }
-
-        public void OpenConnection()
-        {
-            if (connection.State == ConnectionState.Closed)
+            if (Connection.State == ConnectionState.Closed)
             {
-                connection.Open();
+                Connection.Open();
             }
         }
 
-        public void CloseConnection()
+        public static void CloseConnection()
         {
-            if (connection.State == ConnectionState.Open)
+            if (Connection.State == ConnectionState.Open)
             {
-                connection.Close();
+                Connection.Close();
             }
         }
 
-        public DataTable ExecuteQuery(string query, ref string errorMessage, object[] parameterValues = null)
+        public static DataTable ExecuteQuery(string query, ref string errorMessage, object[] parameterValues = null)
         {
+            ConnectionString = $@"Data Source=.;Initial Catalog=SupermarketManagementTEST; User ID={Username}; Password={Password}";
             DataTable dataTable = new DataTable();
             try
             {
-                using (connection = new SqlConnection(connectionString))
+                using (Connection = new SqlConnection(ConnectionString))
                 {
                     OpenConnection();
-                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlCommand command = new SqlCommand(query, Connection);
                     if (parameterValues != null)
                     {
                         string[] parameters = query.Split(' ');
@@ -65,15 +63,16 @@ namespace SupermartketManager.DAO
             return dataTable;
         }
 
-        public int ExecuteNonQuery(string query, ref string errorMessage, object[] parameterValues = null)
+        public static int ExecuteNonQuery(string query, ref string errorMessage, object[] parameterValues = null)
         {
+            ConnectionString = $@"Data Source=.;Initial Catalog=SupermarketManagementTEST; User ID={Username}; Password={Password}";
             int rowsAffected = 0;
             try
             {
-                using (connection = new SqlConnection(connectionString))
+                using (Connection = new SqlConnection(ConnectionString))
                 {
                     OpenConnection();
-                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlCommand command = new SqlCommand(query, Connection);
                     if (parameterValues != null)
                     {
                         string[] parameters = query.Split(' ');
@@ -95,15 +94,16 @@ namespace SupermartketManager.DAO
             return rowsAffected;
         }
 
-        public object ExecuteScalar(string query, ref string errorMessage, object[] parameterValues = null)
+        public static object ExecuteScalar(string query, ref string errorMessage, object[] parameterValues = null)
         {
+            ConnectionString = $@"Data Source=.;Initial Catalog=SupermarketManagementTEST; User ID={Username}; Password={Password}";
             object data = null;
             try
             {
-                using (connection = new SqlConnection(connectionString))
+                using (Connection = new SqlConnection(ConnectionString))
                 {
                     OpenConnection();
-                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlCommand command = new SqlCommand(query, Connection);
                     if (parameterValues != null)
                     {
                         string[] parameters = query.Split(' ');

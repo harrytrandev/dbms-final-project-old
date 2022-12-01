@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -37,12 +37,12 @@
             this.pnlInputs = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPoint = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlInputs.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -66,23 +66,21 @@
             // 
             // dgvCustomers
             // 
-            this.dgvCustomers.AllowUserToAddRows = false;
-            this.dgvCustomers.AllowUserToDeleteRows = false;
-            this.dgvCustomers.AllowUserToResizeColumns = false;
-            this.dgvCustomers.AllowUserToResizeRows = false;
-            this.dgvCustomers.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(46, 150);
-            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.ReadOnly = true;
-            this.dgvCustomers.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nunito", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvCustomers.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvCustomers.RowTemplate.Height = 24;
-            this.dgvCustomers.Size = new System.Drawing.Size(667, 264);
-            this.dgvCustomers.TabIndex = 47;
-            this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
+            this.dgvAccount.AllowUserToAddRows = false;
+            this.dgvAccount.AllowUserToDeleteRows = false;
+            this.dgvAccount.AllowUserToResizeColumns = false;
+            this.dgvAccount.AllowUserToResizeRows = false;
+            this.dgvAccount.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccount.Location = new System.Drawing.Point(57, 187);
+            this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.ReadOnly = true;
+            this.dgvAccount.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nunito", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAccount.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAccount.RowTemplate.Height = 24;
+            this.dgvAccount.Size = new System.Drawing.Size(834, 330);
+            this.dgvAccount.TabIndex = 47;
             // 
             // label2
             // 
@@ -121,9 +119,9 @@
             this.label1.Location = new System.Drawing.Point(39, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 37);
+            this.label1.Size = new System.Drawing.Size(335, 46);
             this.label1.TabIndex = 48;
-            this.label1.Text = "Quản lý khách hàng";
+            this.label1.Text = "Quản lý Khách hàng";
             // 
             // pnlInputs
             // 
@@ -141,65 +139,59 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.txtPoint);
-            this.panel5.Location = new System.Drawing.Point(699, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Location = new System.Drawing.Point(874, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(133, 60);
+            this.panel5.Size = new System.Drawing.Size(166, 75);
             this.panel5.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 3);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(12, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 22);
+            this.label6.Size = new System.Drawing.Size(130, 28);
             this.label6.TabIndex = 0;
             this.label6.Text = "Điểm tích lũy";
             // 
-            // txtPoint
+            // textBox1
             // 
-            this.txtPoint.Enabled = false;
-            this.txtPoint.Font = new System.Drawing.Font("Nunito", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPoint.Location = new System.Drawing.Point(14, 26);
-            this.txtPoint.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPoint.Name = "txtPoint";
-            this.txtPoint.Size = new System.Drawing.Size(101, 33);
-            this.txtPoint.TabIndex = 1;
+            this.textBox1.Font = new System.Drawing.Font("Nunito", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(17, 32);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(125, 39);
+            this.textBox1.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.cbGender);
+            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(573, 2);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(716, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(122, 60);
+            this.panel3.Size = new System.Drawing.Size(152, 75);
             this.panel3.TabIndex = 2;
             // 
-            // cbGender
+            // comboBox1
             // 
-            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbGender.Location = new System.Drawing.Point(14, 28);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(2);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(98, 30);
-            this.cbGender.TabIndex = 1;
+            this.comboBox1.Location = new System.Drawing.Point(17, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 36);
+            this.comboBox1.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 3);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(12, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 22);
+            this.label4.Size = new System.Drawing.Size(94, 28);
             this.label4.TabIndex = 0;
             this.label4.Text = "Giới tính:";
             // 
@@ -213,15 +205,14 @@
             this.panel4.Size = new System.Drawing.Size(170, 60);
             this.panel4.TabIndex = 2;
             // 
-            // dtpBirthday
+            // dateTimePicker1
             // 
-            this.dtpBirthday.CustomFormat = "MM/dd/yyyy";
-            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthday.Location = new System.Drawing.Point(14, 26);
-            this.dtpBirthday.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(143, 29);
-            this.dtpBirthday.TabIndex = 1;
+            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(17, 33);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(178, 35);
+            this.dateTimePicker1.TabIndex = 1;
             // 
             // label5
             // 

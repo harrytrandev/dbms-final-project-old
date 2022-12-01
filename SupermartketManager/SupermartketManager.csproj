@@ -62,7 +62,6 @@
     <Compile Include="DAO\ImportDAO.cs" />
     <Compile Include="DAO\PositionDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
-    <Compile Include="DAO\PromotionDAO.cs" />
     <Compile Include="DAO\WarehouseDAO.cs" />
     <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="DTO\BillDTO.cs" />
@@ -136,6 +135,12 @@
     <Compile Include="GUI\ControlWarehouse.Designer.cs">
       <DependentUpon>ControlWarehouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormCashier.Designer.cs">
+      <DependentUpon>FormCashier.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,11 +171,23 @@
     <Compile Include="GUI\ControlPosition.Designer.cs">
       <DependentUpon>ControlPosition.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormPayment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FormPayment.Designer.cs">
       <DependentUpon>FormPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormWarehouseKeeper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormWarehouseKeeper.Designer.cs">
+      <DependentUpon>FormWarehouseKeeper.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GroupInfo.cs">
       <SubType>UserControl</SubType>
@@ -223,6 +240,9 @@
     <EmbeddedResource Include="GUI\ControlWarehouse.resx">
       <DependentUpon>ControlWarehouse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormCashier.resx">
+      <DependentUpon>FormCashier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,8 +258,14 @@
     <EmbeddedResource Include="GUI\ControlPosition.resx">
       <DependentUpon>ControlPosition.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormPayment.resx">
       <DependentUpon>FormPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormWarehouseKeeper.resx">
+      <DependentUpon>FormWarehouseKeeper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GroupInfo.resx">
       <DependentUpon>GroupInfo.cs</DependentUpon>

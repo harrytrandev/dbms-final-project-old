@@ -118,14 +118,19 @@ namespace SupermartketManager.GUI
             controlProductSoldByMonth1.BringToFront();
         }
 
-        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void controlProductSoldByMonth1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quảnLíTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlAccount1.BringToFront();
         }
 
-        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void controlAccount2_Load(object sender, EventArgs e)
         {
-            controlViewBill1.BringToFront();
+
         }
     }
 }
