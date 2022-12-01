@@ -67,6 +67,11 @@ namespace SupermartketManager.GUI
             controlEmployee1.BringToFront();
         }
 
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlCustomer1.BringToFront();
+        }
+
         private void mniLogout_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -101,6 +106,11 @@ namespace SupermartketManager.GUI
         private void côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlTopCompany1.BringToFront();
+        }
+
+        private void kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlCustomerMaxSpending1.BringToFront();
         }
 
         private void mặtHàngĐãBánTrongThángToolStripMenuItem_Click(object sender, EventArgs e)

@@ -32,7 +32,7 @@
             this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlInputs = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -64,7 +64,7 @@
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvAccount
+            // dgvCustomers
             // 
             this.dgvAccount.AllowUserToAddRows = false;
             this.dgvAccount.AllowUserToDeleteRows = false;
@@ -86,35 +86,38 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 4);
+            this.label2.Location = new System.Drawing.Point(10, 3);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 28);
+            this.label2.Size = new System.Drawing.Size(105, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Số điện thoại";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtPassword);
-            this.panel2.Location = new System.Drawing.Point(283, 3);
+            this.panel2.Controls.Add(this.txtPhone);
+            this.panel2.Location = new System.Drawing.Point(226, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 75);
+            this.panel2.Size = new System.Drawing.Size(184, 60);
             this.panel2.TabIndex = 1;
             // 
-            // txtPassword
+            // txtPhone
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(17, 35);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(194, 35);
-            this.txtPassword.TabIndex = 1;
+            this.txtPhone.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(14, 28);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(156, 29);
+            this.txtPhone.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nunito ExtraBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 34);
+            this.label1.Location = new System.Drawing.Point(39, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 46);
             this.label1.TabIndex = 48;
@@ -127,9 +130,10 @@
             this.pnlInputs.Controls.Add(this.panel4);
             this.pnlInputs.Controls.Add(this.panel2);
             this.pnlInputs.Controls.Add(this.panel1);
-            this.pnlInputs.Location = new System.Drawing.Point(37, 83);
+            this.pnlInputs.Location = new System.Drawing.Point(30, 66);
+            this.pnlInputs.Margin = new System.Windows.Forms.Padding(2);
             this.pnlInputs.Name = "pnlInputs";
-            this.pnlInputs.Size = new System.Drawing.Size(1045, 82);
+            this.pnlInputs.Size = new System.Drawing.Size(836, 66);
             this.pnlInputs.TabIndex = 46;
             // 
             // panel5
@@ -193,11 +197,12 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.dtpBirthday);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(509, 3);
+            this.panel4.Location = new System.Drawing.Point(407, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(212, 75);
+            this.panel4.Size = new System.Drawing.Size(170, 60);
             this.panel4.TabIndex = 2;
             // 
             // dateTimePicker1
@@ -213,9 +218,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 4);
+            this.label5.Location = new System.Drawing.Point(10, 3);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 28);
+            this.label5.Size = new System.Drawing.Size(87, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Ngày sinh:";
             // 
@@ -223,88 +229,103 @@
             // 
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtName);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 75);
+            this.panel1.Size = new System.Drawing.Size(219, 60);
             this.panel1.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 4);
+            this.label3.Location = new System.Drawing.Point(10, 3);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 28);
+            this.label3.Size = new System.Drawing.Size(128, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên khách hàng:";
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(17, 35);
+            this.txtName.Location = new System.Drawing.Point(14, 28);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(245, 35);
+            this.txtName.Size = new System.Drawing.Size(197, 29);
             this.txtName.TabIndex = 1;
             // 
             // btnReload
             // 
             this.btnReload.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.Location = new System.Drawing.Point(3, 3);
+            this.btnReload.Location = new System.Drawing.Point(2, 2);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(2);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(140, 50);
+            this.btnReload.Size = new System.Drawing.Size(112, 40);
             this.btnReload.TabIndex = 8;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(3, 283);
+            this.btnSave.Location = new System.Drawing.Point(2, 226);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(140, 50);
+            this.btnSave.Size = new System.Drawing.Size(112, 40);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(3, 59);
+            this.btnAdd.Location = new System.Drawing.Point(2, 47);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(140, 50);
+            this.btnAdd.Size = new System.Drawing.Size(112, 40);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Thêm mới";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(3, 115);
+            this.btnEdit.Location = new System.Drawing.Point(2, 92);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(140, 50);
+            this.btnEdit.Size = new System.Drawing.Size(112, 40);
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(3, 227);
+            this.btnCancel.Location = new System.Drawing.Point(2, 182);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(140, 50);
+            this.btnCancel.Size = new System.Drawing.Size(112, 40);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(3, 171);
+            this.btnDelete.Location = new System.Drawing.Point(2, 137);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 50);
+            this.btnDelete.Size = new System.Drawing.Size(112, 40);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel8
             // 
@@ -314,23 +335,25 @@
             this.panel8.Controls.Add(this.btnEdit);
             this.panel8.Controls.Add(this.btnCancel);
             this.panel8.Controls.Add(this.btnDelete);
-            this.panel8.Location = new System.Drawing.Point(911, 187);
+            this.panel8.Location = new System.Drawing.Point(729, 150);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(148, 340);
+            this.panel8.Size = new System.Drawing.Size(118, 272);
             this.panel8.TabIndex = 49;
             // 
             // ControlCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Controls.Add(this.dgvAccount);
+            this.Controls.Add(this.dgvCustomers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlInputs);
             this.Controls.Add(this.panel8);
             this.Font = new System.Drawing.Font("Nunito SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ControlCustomer";
-            this.Size = new System.Drawing.Size(1120, 558);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
+            this.Size = new System.Drawing.Size(896, 446);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlInputs.ResumeLayout(false);
@@ -350,19 +373,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvAccount;
+        private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlInputs;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
@@ -374,6 +397,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPoint;
     }
 }

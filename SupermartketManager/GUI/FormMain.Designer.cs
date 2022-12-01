@@ -55,11 +55,14 @@
             this.côngTyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniTopSale = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuTheoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuTheoNămToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.côngTyCungCấpHàngNhiềuNhấtTrongThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kháchHàngChiTiêuNhiềuNhấtThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLíTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniLogout = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,6 +75,8 @@
             // 
             this.panel2.Controls.Add(this.controlAccount2);
             this.panel2.Controls.Add(this.controlProductSoldByMonth1);
+            this.panel2.Controls.Add(this.controlCustomer1);
+            this.panel2.Controls.Add(this.controlCustomerMaxSpending1);
             this.panel2.Controls.Add(this.controlTopCompany1);
             this.panel2.Controls.Add(this.saleStatisticByYear1);
             this.panel2.Controls.Add(this.salesStatisticByMonth1);
@@ -87,9 +92,10 @@
             this.panel2.Controls.Add(this.ucPosition1);
             this.panel2.Controls.Add(this.ucCategory1);
             this.panel2.Controls.Add(this.menu);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(10, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1135, 661);
+            this.panel2.Size = new System.Drawing.Size(908, 529);
             this.panel2.TabIndex = 3;
             // 
             // controlAccount2
@@ -105,50 +111,72 @@
             // 
             this.controlProductSoldByMonth1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.controlProductSoldByMonth1.Location = new System.Drawing.Point(3, 90);
+            this.controlProductSoldByMonth1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.controlProductSoldByMonth1.Name = "controlProductSoldByMonth1";
             this.controlProductSoldByMonth1.Size = new System.Drawing.Size(1120, 558);
             this.controlProductSoldByMonth1.TabIndex = 14;
             this.controlProductSoldByMonth1.Load += new System.EventHandler(this.controlProductSoldByMonth1_Load);
             // 
+            // controlCustomer1
+            // 
+            this.controlCustomer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlCustomer1.Location = new System.Drawing.Point(3, 70);
+            this.controlCustomer1.Margin = new System.Windows.Forms.Padding(2);
+            this.controlCustomer1.Name = "controlCustomer1";
+            this.controlCustomer1.Size = new System.Drawing.Size(896, 446);
+            this.controlCustomer1.TabIndex = 15;
+            // 
+            // controlCustomerMaxSpending1
+            // 
+            this.controlCustomerMaxSpending1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlCustomerMaxSpending1.Location = new System.Drawing.Point(3, 70);
+            this.controlCustomerMaxSpending1.Name = "controlCustomerMaxSpending1";
+            this.controlCustomerMaxSpending1.Size = new System.Drawing.Size(896, 446);
+            this.controlCustomerMaxSpending1.TabIndex = 14;
+            // 
             // controlTopCompany1
             // 
             this.controlTopCompany1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlTopCompany1.Location = new System.Drawing.Point(3, 90);
+            this.controlTopCompany1.Location = new System.Drawing.Point(2, 80);
+            this.controlTopCompany1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.controlTopCompany1.Name = "controlTopCompany1";
-            this.controlTopCompany1.Size = new System.Drawing.Size(1120, 558);
+            this.controlTopCompany1.Size = new System.Drawing.Size(896, 446);
             this.controlTopCompany1.TabIndex = 13;
             // 
             // saleStatisticByYear1
             // 
             this.saleStatisticByYear1.Font = new System.Drawing.Font("Calibri", 12F);
-            this.saleStatisticByYear1.Location = new System.Drawing.Point(0, 103);
+            this.saleStatisticByYear1.Location = new System.Drawing.Point(0, 82);
+            this.saleStatisticByYear1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saleStatisticByYear1.Name = "saleStatisticByYear1";
-            this.saleStatisticByYear1.Size = new System.Drawing.Size(1120, 558);
+            this.saleStatisticByYear1.Size = new System.Drawing.Size(896, 446);
             this.saleStatisticByYear1.TabIndex = 12;
             // 
             // salesStatisticByMonth1
             // 
             this.salesStatisticByMonth1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesStatisticByMonth1.Location = new System.Drawing.Point(0, 88);
+            this.salesStatisticByMonth1.Location = new System.Drawing.Point(0, 70);
+            this.salesStatisticByMonth1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.salesStatisticByMonth1.Name = "salesStatisticByMonth1";
-            this.salesStatisticByMonth1.Size = new System.Drawing.Size(1120, 558);
+            this.salesStatisticByMonth1.Size = new System.Drawing.Size(896, 446);
             this.salesStatisticByMonth1.TabIndex = 11;
             // 
             // controlCompany1
             // 
             this.controlCompany1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlCompany1.Location = new System.Drawing.Point(0, 88);
-            this.controlCompany1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.controlCompany1.Location = new System.Drawing.Point(0, 70);
+            this.controlCompany1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.controlCompany1.Name = "controlCompany1";
-            this.controlCompany1.Size = new System.Drawing.Size(1120, 558);
+            this.controlCompany1.Size = new System.Drawing.Size(896, 446);
             this.controlCompany1.TabIndex = 10;
             // 
             // groupInfo1
             // 
             this.groupInfo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupInfo1.Location = new System.Drawing.Point(0, 88);
+            this.groupInfo1.Location = new System.Drawing.Point(0, 70);
+            this.groupInfo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupInfo1.Name = "groupInfo1";
-            this.groupInfo1.Size = new System.Drawing.Size(1120, 558);
+            this.groupInfo1.Size = new System.Drawing.Size(896, 446);
             this.groupInfo1.TabIndex = 9;
             // 
             // lbAccountInfo
@@ -166,64 +194,72 @@
             // controlImport1
             // 
             this.controlImport1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlImport1.Location = new System.Drawing.Point(0, 88);
+            this.controlImport1.Location = new System.Drawing.Point(0, 70);
+            this.controlImport1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.controlImport1.Name = "controlImport1";
-            this.controlImport1.Size = new System.Drawing.Size(1120, 558);
+            this.controlImport1.Size = new System.Drawing.Size(896, 446);
             this.controlImport1.TabIndex = 8;
             // 
             // controlAccount1
             // 
             this.controlAccount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlAccount1.Location = new System.Drawing.Point(0, 88);
+            this.controlAccount1.Location = new System.Drawing.Point(0, 70);
+            this.controlAccount1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.controlAccount1.Name = "controlAccount1";
-            this.controlAccount1.Size = new System.Drawing.Size(1120, 558);
+            this.controlAccount1.Size = new System.Drawing.Size(896, 446);
             this.controlAccount1.TabIndex = 6;
             // 
             // controlWarehouse1
             // 
             this.controlWarehouse1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlWarehouse1.Location = new System.Drawing.Point(0, 88);
+            this.controlWarehouse1.Location = new System.Drawing.Point(0, 70);
+            this.controlWarehouse1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.controlWarehouse1.Name = "controlWarehouse1";
-            this.controlWarehouse1.Size = new System.Drawing.Size(1120, 558);
+            this.controlWarehouse1.Size = new System.Drawing.Size(896, 446);
             this.controlWarehouse1.TabIndex = 5;
             // 
             // controlEmployee1
             // 
             this.controlEmployee1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlEmployee1.Location = new System.Drawing.Point(0, 88);
+            this.controlEmployee1.Location = new System.Drawing.Point(0, 70);
+            this.controlEmployee1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.controlEmployee1.Name = "controlEmployee1";
-            this.controlEmployee1.Size = new System.Drawing.Size(1120, 558);
+            this.controlEmployee1.Size = new System.Drawing.Size(896, 446);
             this.controlEmployee1.TabIndex = 4;
             // 
             // controlProduct1
             // 
             this.controlProduct1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlProduct1.Location = new System.Drawing.Point(0, 88);
+            this.controlProduct1.Location = new System.Drawing.Point(0, 70);
+            this.controlProduct1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.controlProduct1.Name = "controlProduct1";
-            this.controlProduct1.Size = new System.Drawing.Size(1120, 558);
+            this.controlProduct1.Size = new System.Drawing.Size(896, 446);
             this.controlProduct1.TabIndex = 3;
             // 
             // ucEmployee1
             // 
             this.ucEmployee1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucEmployee1.Location = new System.Drawing.Point(0, 88);
+            this.ucEmployee1.Location = new System.Drawing.Point(0, 70);
+            this.ucEmployee1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ucEmployee1.Name = "ucEmployee1";
-            this.ucEmployee1.Size = new System.Drawing.Size(1120, 558);
+            this.ucEmployee1.Size = new System.Drawing.Size(896, 446);
             this.ucEmployee1.TabIndex = 2;
             // 
             // ucPosition1
             // 
             this.ucPosition1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucPosition1.Location = new System.Drawing.Point(0, 88);
+            this.ucPosition1.Location = new System.Drawing.Point(0, 70);
+            this.ucPosition1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ucPosition1.Name = "ucPosition1";
-            this.ucPosition1.Size = new System.Drawing.Size(1120, 558);
+            this.ucPosition1.Size = new System.Drawing.Size(896, 446);
             this.ucPosition1.TabIndex = 1;
             // 
             // ucCategory1
             // 
-            this.ucCategory1.Location = new System.Drawing.Point(0, 88);
+            this.ucCategory1.Location = new System.Drawing.Point(0, 70);
+            this.ucCategory1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ucCategory1.Name = "ucCategory1";
-            this.ucCategory1.Size = new System.Drawing.Size(1120, 558);
+            this.ucCategory1.Size = new System.Drawing.Size(896, 446);
             this.ucCategory1.TabIndex = 0;
             // 
             // menu
@@ -377,12 +413,13 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1158, 685);
+            this.ClientSize = new System.Drawing.Size(926, 548);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menu;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";
