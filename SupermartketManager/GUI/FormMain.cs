@@ -122,5 +122,10 @@ namespace SupermartketManager.GUI
         {
             controlAccount1.BringToFront();
         }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlViewBill1.BringToFront();
+        }
     }
 }
