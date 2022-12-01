@@ -63,5 +63,10 @@ namespace SupermartketManager.DAO
             query = "SELECT * from [dbo].[func_Statistic_Sale_ByYear]()";
             return dataProvider.ExecuteQuery(query, ref errorMessage);
         }
+        public DataTable ViewBill(ref String errorMessage)
+        {
+            query = "SELECT * from [dbo].[view_BILL_BILLINFO]";
+            return dataProvider.ExecuteQuery(query, ref errorMessage);
+        }
     }
 }
